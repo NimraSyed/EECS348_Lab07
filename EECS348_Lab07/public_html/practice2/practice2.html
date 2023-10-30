@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practice 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="changingcolors">
+        <div id="p">
+            In the quiet, sun-dappled corners of a quaint library, where the scent of well-worn books and whispered tales of forgotten adventures linger in the air, 
+            one can't help but lose themselves in the enchanting dance of words. Each book on the shelves, a portal to uncharted realms, awaits an intrepid traveler to unlock its secrets. 
+            The pages, like ancient manuscripts, hold stories of love and loss, heroes and villains, and the timeless wisdom of generations. 
+            In this sanctuary of knowledge, the world outside fades away, and for a moment, the imagination soars, 
+            as we embark on a literary journey through the boundless landscapes of the mind.
+        </div>
+        <label for="text-color">Text Color</label>
+        <input type="text" id="text-color" name="text-color" placeholder="choose: red, green, or blue">
+        <label for="border-color">Border Color</label>
+        <input type="text" id="border-color" name="border-color" placeholder="choose: red, green, blue"><br>
+        <label for="width-size">Width</label>
+        <input type="text" id="width-size" name="width-size" placeholder="1, 2, 3">
+    </div>
+    <script>
+        var textColorInput = document.getElementById("text-color");
+        var preview = document.getElementById("preview");
+        var p = document.getElementById("p");
+
+        textColorInput.addEventListener("input", function () {
+            var textColor = textColorInput.value;
+            p.style.color = textColor;
+            preview.style.color = textColor;
+        });
+
+        var borderColorInput = document.getElementById("border-color");
+        borderColorInput.addEventListener("input", function () {
+            var borderColor = borderColorInput.value;
+            p.style.borderColor = borderColor;
+        });
+
+        var widthSizeInput = document.getElementById("width-size");
+        widthSizeInput.addEventListener("input", function () {
+            var widthSize = widthSizeInput.value;
+            p.style.borderWidth = widthSize + "px";
+        });
+    </script>
+</body>
+
+</html>
